@@ -53,7 +53,7 @@ Hands-on work with Python's `socket` module, covering:
 
 ## 👤 About
 
-This repository documents my learning journey through security fundamentals and networking concepts. Each task was completed independently as part of structured skill-building in cybersecurity and Python programming.
+This repository documents my learning journey through security fundamentals and networking concepts. Each task was completed independently but i admit suing ai (just a  learning platform) as part of structured skill-building in cybersecurity and Python programming.
 
 ---
 
