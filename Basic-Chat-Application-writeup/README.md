@@ -45,8 +45,10 @@ Type a message in either terminal and it will appear on the other side. Type `by
 - Why you encode text to bytes before sending and decode it back after receiving
 - The difference between `send()` and `sendall()` and why `sendall()` is safer
 
-## What's Next
-- [ ] Implement end-to-end encryption using Python's `cryptography` library so messages 
-      can't be intercepted and read as plain text
-- [ ] Support multiple clients at the same time
-- [ ] Build a simple UI
+## Planned Security Features
+- [ ] **Symmetric key encryption** — encrypt messages before sending so they can't be 
+      read if intercepted (considering AES or similar)
+- [ ] **SHA-512 hashing** — hash each message to verify integrity and ensure nothing 
+      was tampered with in transit
+- [ ] **HMAC (Hash-based Message Authentication Code)** — authenticate messages to 
+      confirm they actually came from the expected sender and weren't modified
