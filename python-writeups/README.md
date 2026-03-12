@@ -102,7 +102,5 @@ atirm2$a
 
 ---
 
-## Author
 
-**[Your Name]**  
-GitHub: [github.com/your-username](https://github.com/your-username)
+
