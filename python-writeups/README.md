@@ -33,17 +33,15 @@ enter the target: 3
 Takes a string entered by the user and checks whether it reads the same forwards and backwards. Prints whether it is a palindrome or not.
 
 ```python
-def ispalindrome(s):
-    rev=(s[::-1])
-    if  rev==s:
-        return 0
-    return 1
-stri=input("enter the string")
-pal=ispalindrome(stri)
-if pal==0:
-    print(stri,'is palindrome')
+
+s = input("Enter a string: ")
+
+rev = s[::-1]
+
+if s == rev:
+    print("The string is a palindrome")
 else:
-    print(stri,'not ispalindrome')
+    print("The string is not a palindrome")
 ```
 
 **Output:**
