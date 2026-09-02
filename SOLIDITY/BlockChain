@@ -1,1 +1,94 @@
+Who can modify these?
+        ↓
+When can they be modified?
+        ↓
+What assumptions does the contract make?
+        ↓
+Can I violate those assumptions?
 
+
+
+
+
+solidity lessons:
+
+Basic data types:
+
+1.Bool : T or F
+
+2.uint - unsigned integer (default 256);
+
+3.int - signed (-ve or +ve) (default 256);
+
+4.Adress: 20 bytes long = 160 bitslong
+1 bit = 0 or 1
+1 byte = group of 8 bits
+
+5.bytes32 favbite = "cat"
+basically the hex rep of cat gets stored not cat
+
+5.1 bytes and bytes32 are different
+    dynamic   static     araay
+---------------------------------------------------------------------------
+Data Locations
+Solidity can store data in six different locations. In this lesson, we will focus on the first three:
+
+Calldata
+
+Memory
+
+Storage
+
+Stack
+
+Code
+
+Logs
+
+Calldata and Memory:
+In Solidity, calldata and memory are temporary storage locations for variables during function execution. calldata is read-only, used for function inputs that can't be modified. In contrast, memory allows for read-write access, letting variables be changed within the function. To modify calldata variables, they must first be loaded into memory.
+important::
+---------------------------------------------------------------------------
+
+
+             TRANSACTION
+                 │
+                 │ calldata
+                 ↓
+        ┌───────────────────┐
+        │     CONTRACT      │
+        │                   │
+        │    STORAGE        │ ← permanent state
+        │                   │
+        │    MEMORY         │ ← temporary workspace
+        │                   │
+        │    STACK          │ ← tiny execution data
+        └───────────────────┘
+
+
+
+VISIBILITY:
+
+The terms view and pure are used when a function reads values from the blockchain without altering its state. Such functions will not initiate transactions but rather make calls, represented as blue buttons in the Remix interface. A pure function will prohibit any reading from the state or storage.
+**While calling view or pure functions doesn’t typically require gas, they do require it when called by another function that modifies the state or storage through a transaction (e.g. calling the function retrieve inside the function storage). This cost is called execution cost and it will add up to the transaction cost.
+
+                 Outside       Same Contract      Child Contract
+
+public              ✅               ✅                  ✅
+
+external            ✅               ❌                  ❌*
+
+internal            ❌               ✅                  ✅
+
+private             ❌               ✅                  ❌
+
+
+
+
+ArraYS:**
+
+What can add elements?
+What can remove elements?
+Who can modify it?
+Can the index be manipulated?
+Does the code assume an index exists?
