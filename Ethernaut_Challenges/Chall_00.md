@@ -51,7 +51,6 @@ Ethernaut then deployed a new instance of the `Hello Ethernaut` contract for my 
 
 Once the deployment transaction was completed, the level contract became available through the `contract` variable in the browser console.
 
-The important point here is that I was interacting with my own level instance rather than directly modifying the main Ethernaut contract.
 
 ---
 
@@ -73,7 +72,7 @@ The contract returned:
 
 This was the first clue.
 
-The contract was essentially giving me a sequence of hints, where each function would tell me what to investigate next.
+The contract was essentially giving me a set of hints one by one, where each function would tell me what to investigate next.
 
 Based on the response, the next function to call was:
 
